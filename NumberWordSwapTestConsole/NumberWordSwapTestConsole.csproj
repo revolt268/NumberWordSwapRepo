@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NumberWordSwap\NumberWordSwap.csproj" />
+    <ProjectReference Include="..\NUnitTestForNumberWordSwap\NUnitTestForNumberWordSwap.csproj" />
   </ItemGroup>
 
 </Project>
