@@ -60,7 +60,7 @@ namespace NumberWordSwap
         /// </summary>
         /// <param name="wordFor3">Word to use when divisible by 3</param>
         /// <param name="wordFor5">Word to use when divisible by 5</param>
-        /// <param name="upperLimit"></param>
+        /// <param name="upperLimit">The last number to stop the process on</param>
         public NumberWordSwapper(string wordFor3, string wordFor5, int upperLimit)
         {
             WordFor3 = wordFor3;
@@ -92,7 +92,7 @@ namespace NumberWordSwap
             int startIndex = 0;
             for (int index = 1; index <= UpperLimit; index++)
             {
-                list.Add(ProcessNumberSwap("Fizz", "Buzz", index));
+                list.Add(ProcessNumberSwap(index));
 
                 // Cache a 1000 results and put them into the Cache Results list
                 // the even will trigger when this happens allowing the Console to fire off a print when the 1000 is available
@@ -112,20 +112,20 @@ namespace NumberWordSwap
         /// <param name="wordFor5"></param>
         /// <param name="num"></param>
         /// <returns>Either the original number as a string or the resulting word(s)</returns>
-        public string ProcessNumberSwap(string wordFor3, string wordFor5, int num)
+        public string ProcessNumberSwap(int num)
         {
             string value = num.ToString();
             if (num % 3 == 0 && num % 5 == 0)
             {
-                value = $"{wordFor3}{wordFor5}";
+                value = $"{WordFor3}{WordFor5}";
             }
             else if (num % 5 == 0)
             {
-                value = wordFor5;
+                value = WordFor5;
             }
             else if (num % 3 == 0)
             {
-                value = wordFor3;
+                value = WordFor3;
             }
             return value;
         }

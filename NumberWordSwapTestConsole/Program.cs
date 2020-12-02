@@ -10,7 +10,7 @@ namespace NumberWordSwapTestConsole
         static void Main(string[] args)
         {
             // Decided to create a class for this to process the numbers and maintain a cache
-            NumberWordSwapper numberSwapper = new NumberWordSwapper(1000);
+            NumberWordSwapper numberSwapper = new NumberWordSwapper("My", "Word", 1000);
             // Attaching the below method to capture the caches list as it is completed.  
             numberSwapper.PropertyChanged += NumberSwapper_PropertyChanged;
             var output = numberSwapper.ProcessValues();

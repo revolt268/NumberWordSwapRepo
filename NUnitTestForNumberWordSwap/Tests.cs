@@ -18,7 +18,7 @@ namespace NUnitTestForNumberWordSwap
         public void Is15FizzBuzz()
         {
             NumberWordSwap.NumberWordSwapper newSwapper = new NumberWordSwapper(20);
-            string result = newSwapper.ProcessNumberSwap("Fizz", "Buzz", 15);
+            string result = newSwapper.ProcessNumberSwap(15);
             Assert.AreEqual(result, "FizzBuzz");
         }
     }
